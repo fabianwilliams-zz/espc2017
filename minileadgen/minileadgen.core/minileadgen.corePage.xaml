@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:minileadgen.core" 
+    x:Class="minileadgen.core.minileadgen_corePage">
+	<Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+                <ActivityIndicator Grid.RowSpan="2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       IsVisible="False"
+                       IsEnabled="True"
+                       x:Name="syncIndicator"/>
+        <StackLayout Grid.Row="0" BackgroundColor="Yellow" Padding="10,30,10,5">
+            <Label TextColor="#555555" Text="ESPC 2017 Leads Demo" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                  <Entry x:Name="newCountryName"
+                  Placeholder="Enter Country Name Here" />
+                    <StackLayout x:Name="labelPanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label TextColor="#555555" Text="Country" />
+                </StackLayout>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                  <Entry x:Name="newAddrType"
+                  Placeholder="Business or Home" />
+                    <StackLayout x:Name="addrTypePanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label TextColor="#555555" Text="Type" />
+                </StackLayout>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                  <Entry x:Name="newStreetNum"
+                  Placeholder="Street Numbber Here" />
+                    <StackLayout x:Name="streetNumPanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label TextColor="#555555" Text="Street Num" />
+                </StackLayout>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                  <Entry x:Name="newAddressName"
+                  Placeholder="Street Address" />
+                    <StackLayout x:Name="streetAddrPanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label TextColor="#555555" Text="Street Addr" />
+                </StackLayout>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                  <Entry x:Name="newFirstName"
+                  Placeholder="First Name Here" />
+                    <StackLayout x:Name="fnamePanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label TextColor="#555555" Text="First Name" />
+                </StackLayout>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                  <Entry x:Name="newSourceName"
+                  Placeholder="Source of Lead" />
+                    <StackLayout x:Name="sourcePanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label TextColor="#555555" Text="Source" />
+                </StackLayout>
+            </Grid>
+            <Button Text="AddMe" MinimumHeightRequest="30"
+                  Clicked="OnAdd" />
+        </StackLayout>
+        <ListView x:Name="leadsList"
+                            ItemSelected="OnSelected"
+                            IsPullToRefreshEnabled="true" Refreshing="OnRefresh"
+                            Grid.Row="1">
+             <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Clicked="OnComplete" Text="Complete" CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
+                        <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="15,5,0,0">
+                            <StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
+                                <Label Text="{Binding Source}"  />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>    
+        </ListView>
+    </Grid>
+</ContentPage>
