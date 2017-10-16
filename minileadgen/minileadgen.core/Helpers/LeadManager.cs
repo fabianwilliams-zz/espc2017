@@ -11,10 +11,10 @@ namespace minileadgen.core.Helpers
 {
     public partial class LeadManager
     {
-        static LeadManager defaultInstance = new LeadManager();
+         static LeadManager defaultInstance = new LeadManager();
 
         const string accountURL = @"https://fabian.documents.azure.com:443/";
-        const string accountKey = @"YOUR KEY HERE";
+        const string accountKey = @"";
         const string databaseId = @"fabsalpha";
         const string collectionId = @"Leads";
 

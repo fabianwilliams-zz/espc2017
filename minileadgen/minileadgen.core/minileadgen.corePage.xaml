@@ -7,7 +7,7 @@
 	<Grid RowSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
                 <ActivityIndicator Grid.RowSpan="2"
                        HorizontalOptions="Center"
@@ -20,82 +20,77 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                   <Entry x:Name="newCountryName"
-                  Placeholder="Enter Country Name Here" />
-                    <StackLayout x:Name="labelPanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                        <Label TextColor="#555555" Text="Country" />
+                  Placeholder="Country Name" />
+                    <StackLayout x:Name="addrtypePanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                    <Entry x:Name="newAddrType"
+                  Placeholder="Bussiness/Home" />
                 </StackLayout>
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                  <Entry x:Name="newAddrType"
-                  Placeholder="Business or Home" />
-                    <StackLayout x:Name="addrTypePanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                        <Label TextColor="#555555" Text="Type" />
-                </StackLayout>
-            </Grid>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                  <Entry x:Name="newStreetNum"
-                  Placeholder="Street Numbber Here" />
-                    <StackLayout x:Name="streetNumPanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                        <Label TextColor="#555555" Text="Street Num" />
-                </StackLayout>
-            </Grid>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                  <Entry x:Name="newAddressName"
+                    <Entry x:Name="newStreetNum"
+                  Placeholder="Street Number" />
+                    <StackLayout x:Name="addrnamePanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                     <Entry x:Name="newAddressName"
                   Placeholder="Street Address" />
-                    <StackLayout x:Name="streetAddrPanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                        <Label TextColor="#555555" Text="Street Addr" />
                 </StackLayout>
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                    <Entry x:Name="newCity"
+                  Placeholder="City Name" />
+                    <StackLayout x:Name="aptPanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                   <Entry x:Name="newApt"
+                  Placeholder="AptNum" />
+                </StackLayout>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
                   <Entry x:Name="newFirstName"
-                  Placeholder="First Name Here" />
-                    <StackLayout x:Name="fnamePanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                        <Label TextColor="#555555" Text="First Name" />
+                  Placeholder="First Name" />
+                    <StackLayout x:Name="lnamePanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                  <Entry x:Name="newLastName"
+                  Placeholder="Last Name" />
+                </StackLayout>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                  <Entry x:Name="newContactPhone"
+                  Placeholder="Phone Num" />
+                    <StackLayout x:Name="emailPanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                  <Entry x:Name="newContactEmail"
+                  Placeholder="Email" />
                 </StackLayout>
             </Grid>
              <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                  <Entry x:Name="newLastName"
-                  Placeholder="Last Name Here" />
-                    <StackLayout x:Name="lnamePanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                        <Label TextColor="#555555" Text="Last Name" />
-                </StackLayout>
-            </Grid>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
+                  <Entry x:Name="newInterest"
+                  Placeholder="Interest" />
+                    <StackLayout x:Name="addmePanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
                   <Entry x:Name="newSourceName"
                   Placeholder="Source of Lead" />
-                    <StackLayout x:Name="sourcePanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                        <Label TextColor="#555555" Text="Source" />
                 </StackLayout>
             </Grid>
-            <Button Text="AddMe" MinimumHeightRequest="30"
-                  Clicked="OnAdd" />
+                <Button Text="AddMe" MinimumHeightRequest="30"
+          Clicked="OnAdd" />
         </StackLayout>
         <ListView x:Name="leadsList"
                             ItemSelected="OnSelected"

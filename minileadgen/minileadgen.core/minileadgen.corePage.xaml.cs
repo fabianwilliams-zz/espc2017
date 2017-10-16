@@ -9,7 +9,7 @@ namespace minileadgen.core
 {
     public partial class minileadgen_corePage : ContentPage
     {
-        LeadManager manager;
+         LeadManager manager;
 
         public minileadgen_corePage()
         {
