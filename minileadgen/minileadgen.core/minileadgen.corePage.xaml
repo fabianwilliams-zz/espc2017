@@ -7,7 +7,7 @@
 	<Grid RowSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
                 <ActivityIndicator Grid.RowSpan="2"
                        HorizontalOptions="Center"
@@ -104,7 +104,7 @@
                         </ViewCell.ContextActions>
                         <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal" Padding="15,5,0,0">
                             <StackLayout Padding="5,0,0,0" VerticalOptions="StartAndExpand" Orientation="Vertical">
-                                <Label Text="{Binding Source}"  />
+                                <Label Text="{Binding Name.firstname}"  />
                             </StackLayout>
                         </StackLayout>
                     </ViewCell>

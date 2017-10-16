@@ -7,6 +7,8 @@ using Microsoft.Azure.Documents.Client;
 using Microsoft.Azure.Documents.Linq;
 using minileadgen.core.Models;
 
+//  ALWAY ALWAY REMEMBER TO PUT THE KEY BACK. AND REMOVE BEFORE COMITTING TO PUBLIC GITHUB
+
 namespace minileadgen.core.Helpers
 {
     public partial class LeadManager
@@ -14,7 +16,7 @@ namespace minileadgen.core.Helpers
          static LeadManager defaultInstance = new LeadManager();
 
         const string accountURL = @"https://fabian.documents.azure.com:443/";
-        const string accountKey = @"";
+        const string accountKey = @"YOUR KEY HERE"; //  ALWAY ALWAY REMEMBER TO PUT THE KEY BACK. AND REMOVE BEFORE COMITTING TO PUBLIC GITHUB
         const string databaseId = @"fabsalpha";
         const string collectionId = @"Leads";
 

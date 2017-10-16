@@ -58,7 +58,16 @@ namespace minileadgen.core
             {
                 type = newAddrType.Text,
                 streetNumber = newStreetNum.Text,
-                streetName = newAddressName.Text
+                streetName = newAddressName.Text,
+                aptNum = newApt.Text,
+                city = newCity.Text
+                                           
+            };
+
+            Contact ncon = new Contact
+            {
+                phone = newContactPhone.Text,
+                email = newContactEmail.Text
             };
 
             var l = new Lead
@@ -66,7 +75,11 @@ namespace minileadgen.core
                 Country = newCountryName.Text,
                 Source = newSourceName.Text,
                 Name = nl,
-                Address = naddr
+                Address = naddr,
+                Contact = ncon,
+                Interest = newInterest.Text,
+                IsConverted = false,
+                DateAdded = DateTime.Now
 
             };
             await AddItem(l);
@@ -85,6 +98,16 @@ namespace minileadgen.core
             newAddressName.Unfocus();
             newAddrType.Text = string.Empty;
             newAddrType.Unfocus();
+            newApt.Text = string.Empty;
+            newApt.Unfocus();
+            newCity.Text = string.Empty;
+            newCity.Unfocus();
+            newContactPhone.Text = string.Empty;
+            newContactPhone.Unfocus();
+            newContactEmail.Text = string.Empty;
+            newContactEmail.Unfocus();
+            newInterest.Text = string.Empty;
+            newInterest.Unfocus();
         }
 
         public async void OnRefresh(object sender, EventArgs e)
