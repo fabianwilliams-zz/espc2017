@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using minileadgen.core.Helpers;
 using minileadgen.core.Models;
@@ -31,7 +32,7 @@ namespace minileadgen.core
 
         }
 
-        // http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/listview/#context
+
         public async void OnComplete(object sender, EventArgs e)
         {
 
@@ -46,10 +47,27 @@ namespace minileadgen.core
 
         public async void OnAdd(object sender, EventArgs e)
         {
+            Name nl = new Name
+            {
+                firstname = newFirstName.Text,
+                last = newLastName.Text
+
+            };
+
+            Address naddr = new Address
+            {
+                type = newAddrType.Text,
+                streetNumber = newStreetNum.Text,
+                streetName = newAddressName.Text
+            };
+
             var l = new Lead
             {
                 Country = newCountryName.Text,
-                Source = newSourceName.Text
+                Source = newSourceName.Text,
+                Name = nl,
+                Address = naddr
+
             };
             await AddItem(l);
 
@@ -57,9 +75,18 @@ namespace minileadgen.core
             newCountryName.Unfocus();
             newSourceName.Text = string.Empty;
             newSourceName.Unfocus();
+            newFirstName.Text = string.Empty;
+            newFirstName.Unfocus();
+            newLastName.Text = string.Empty;
+            newLastName.Unfocus();
+            newStreetNum.Text = string.Empty;
+            newStreetNum.Unfocus();
+            newAddressName.Text = string.Empty;
+            newAddressName.Unfocus();
+            newAddrType.Text = string.Empty;
+            newAddrType.Unfocus();
         }
 
-        // http://developer.xamarin.com/guides/cross-platform/xamarin-forms/working-with/listview/#pulltorefresh
         public async void OnRefresh(object sender, EventArgs e)
         {
             var list = (ListView)sender;

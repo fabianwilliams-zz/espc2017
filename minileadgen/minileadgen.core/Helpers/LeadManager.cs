@@ -14,7 +14,7 @@ namespace minileadgen.core.Helpers
         static LeadManager defaultInstance = new LeadManager();
 
         const string accountURL = @"https://fabian.documents.azure.com:443/";
-        const string accountKey = @"REDACTED";
+        const string accountKey = @"YOUR KEY HERE";
         const string databaseId = @"fabsalpha";
         const string collectionId = @"Leads";
 

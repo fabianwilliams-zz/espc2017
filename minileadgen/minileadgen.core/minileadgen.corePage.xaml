@@ -72,6 +72,17 @@
                         <Label TextColor="#555555" Text="First Name" />
                 </StackLayout>
             </Grid>
+             <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                  <Entry x:Name="newLastName"
+                  Placeholder="Last Name Here" />
+                    <StackLayout x:Name="lnamePanel" Grid.Column="1" Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                        <Label TextColor="#555555" Text="Last Name" />
+                </StackLayout>
+            </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>

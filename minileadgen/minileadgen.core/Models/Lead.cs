@@ -11,7 +11,7 @@ namespace minileadgen.core.Models
         [JsonProperty(PropertyName = "country")]
         public string Country { get; set; }
         [JsonProperty(PropertyName = "address")]
-        public List<Address> Address { get; set; }
+        public Address Address { get; set; }
         [JsonProperty(PropertyName = "name")]
         public Name Name { get; set; }
         [JsonProperty(PropertyName = "source")]
