@@ -1,0 +1,28 @@
+{
+	"id": "ColeFamily",
+	"parents": [
+		{ "familyName": "Cole", "givenName": "Novlet" },
+		{ "familyName": "Cole", "givenName": "Don" }
+	],
+	"children": [
+		{
+			"givenName": "Fabian",
+			"gender": "male",
+			"grade": 13
+		},
+		{
+			"givenName": "Junior",
+			"gender": "male",
+			"grade": 5,
+			"pets": [
+				{ "givenName": "Blue", "type": "Fish" }
+			]
+		}
+	],
+	"location": {
+		"state": "FL",
+		"county": "Collier",
+		"city": "Naples"
+	},
+	"isRegistered": true
+}

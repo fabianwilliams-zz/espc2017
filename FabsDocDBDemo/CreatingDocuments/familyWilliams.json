@@ -1,0 +1,18 @@
+{
+	"id": "WilliamsFamily",
+	"lastName": "Williams",
+	"parents": [
+		{ "firstName": "Fabian", "relationship":  "father" },
+		{ "firstName": "Mariam", "relationship":  "mother" }
+	],
+	"children": [
+		{
+			"firstName": "Gabby",
+			"gender": "female",
+			"grade": 4,
+			"pets": [ { "givenName": "Tico", "type":  "Dog" } ]
+		}
+	],
+	"location": { "state": "MD", "county": "Howard", "city": "Laurel" },
+	"isRegistered": true
+}

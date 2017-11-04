@@ -1,0 +1,31 @@
+{
+	"id": "Live360Family",
+	"parents": [
+		{ "familyName": "Events", "givenName": "SharePoint" },
+		{ "familyName": "Events", "givenName": "AppTrends" }
+	],
+	"children": [
+		{
+			"familyName": "Dissy",
+			"givenName": "Walt",
+			"gender": "male",
+			"grade": 3,
+			"pets": [
+				{ "givenName": "Mickey", "type": "Mouse" },
+                { "givenName": "Goofy", "type": "Dog" },
+                { "givenName": "Donald", "type": "Duck" }
+			]
+		},
+		{
+			"familyName": "Potter",
+			"givenName": "Harrice",
+			"gender": "female",
+			"grade": 5,
+			"pets": [
+				{ "givenName": "Hedwig", "type": "Owl" }
+			]
+		}
+	],
+	"location": { "state": "Wa", "county": "Pike", "city": "Seattle" },
+	"isRegistered": false
+}
