@@ -16,7 +16,7 @@ namespace minileadgen.core.Helpers
          static LeadManager defaultInstance = new LeadManager();
 
         const string accountURL = @"https://fabian.documents.azure.com:443/";
-        const string accountKey = @"YOUR KEY HERE"; //  ALWAY ALWAY REMEMBER TO PUT THE KEY BACK. AND REMOVE BEFORE COMITTING TO PUBLIC GITHUB
+        const string accountKey = @"bvDULSic0MDonThDyBLE24ZlK5ATM5MXmFiZ20IwVsriaYUtlBK15GD2KfYC0ty0I6xJtPCd7F1DJd8hKfBduA=="; //  ALWAY ALWAY REMEMBER TO PUT THE KEY BACK. AND REMOVE BEFORE COMITTING TO PUBLIC GITHUB
         const string databaseId = @"fabsalpha";
         const string collectionId = @"Leads";
 
